@@ -1,0 +1,16 @@
+.hero {
+  display: grid;
+  gap: 2rem;
+
+  &__text {
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  &__right-column {
+    display: grid;
+    gap: 2rem;
+    justify-items: flex-start;
+  }
+}

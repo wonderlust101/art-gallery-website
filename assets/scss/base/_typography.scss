@@ -1,6 +1,32 @@
 @use '../abstract' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, a {
+  font-family: 'Big Shoulders Display', sans-serif;
+  color: var(--clr-black);
+}
 
+h1 {
+  font-size: 3.75rem;
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.125rem;
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+a {
+  font-size: 1.5rem;
 }

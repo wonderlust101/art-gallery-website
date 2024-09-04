@@ -1,0 +1,23 @@
+@use '../abstract' as a;
+
+.home-page {
+  display: grid;
+  gap: 7.5rem;
+
+  &__content {
+    display: grid;
+    gap: 7.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    @include a.set-grid-areas(header, image1, text1, image2, image3, text2);
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  &__grid-text {
+    display: grid;
+    gap: 1.5rem;
+  }
+}

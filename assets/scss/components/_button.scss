@@ -1,0 +1,9 @@
+.button {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  padding: 1.5rem 2rem;
+  color: var(--clr-white);
+  background-color: var(--clr-black);
+}
