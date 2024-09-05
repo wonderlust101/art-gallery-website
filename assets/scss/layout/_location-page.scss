@@ -1,0 +1,56 @@
+@use '../abstract' as a;
+
+.location {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+
+  &__header {
+    position: absolute;
+    place-self: start;
+
+    @include a.breakpoint(medium) {
+      margin-left: 5%;
+    }
+
+    @include a.breakpoint(large) {
+      margin-left: 10%;
+    }
+  }
+
+  &__map {
+    width: 100%;
+  }
+
+  &__details {
+    display: grid;
+    justify-items: center;
+    background-color: var(--clr-black);
+  }
+
+  &__details-grid {
+    display: grid;
+    gap: 4.25rem;
+    width: min(100%, 130rem);
+    padding: 3rem 1rem;
+
+    @include a.breakpoint(medium) {
+      grid-template: 1fr  / max-content 1fr;
+      padding: 5.5rem 2.5rem;
+    }
+
+    @include a.breakpoint(large) {
+      gap: 14rem;
+      padding: 6.5rem 10rem;
+    }
+  }
+
+  &__details-header {
+    color: var(--clr-white);
+  }
+
+  &__details-body {
+    display: grid;
+    gap: 1.25rem;
+    color: var(--clr-white);
+  }
+}

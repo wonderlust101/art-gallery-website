@@ -11,6 +11,14 @@ h1 {
   font-weight: 900;
   line-height: 0.9;
   text-transform: uppercase;
+  
+  @include a.breakpoint(medium) {
+    font-size: 4.375rem;
+  }
+
+  @include a.breakpoint(large) {
+    font-size: 6rem;
+  }
 }
 
 h2 {
@@ -18,6 +26,26 @@ h2 {
   font-weight: 900;
   line-height: 0.9;
   text-transform: uppercase;
+
+  @include a.breakpoint(medium) {
+    font-size: 3.125rem;
+  }
+
+  @include a.breakpoint(large) {
+    font-size: 3.75rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--clr-main-color-brown);
+
+  @include a.breakpoint(large) {
+    font-size: 2.25rem;
+  }
 }
 
 p {
@@ -25,8 +53,20 @@ p {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.5;
+
+  @include a.breakpoint(large) {
+    font-size: 1.375rem;
+  }
 }
 
 a {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.22725rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
 }

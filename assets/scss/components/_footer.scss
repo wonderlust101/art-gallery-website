@@ -1,23 +1,69 @@
+@use '../abstract' as a;
+
 .footer {
   background-color: var(--clr-black);
   color: var(--clr-white);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
   &__content {
     display: grid;
     gap: 2.25rem;
     padding: 3rem 2rem;
+    justify-content: center;
+    width: min(100%, 130rem);
+    
+    @include a.breakpoint(medium) {
+      grid-template-columns: max-content 20rem 1fr;
+      gap: 4rem;
+    }
+    
+    @include a.breakpoint(large) {
+      grid-template-columns: max-content 30rem 1fr;
+      padding: 5rem 10rem;
+      gap: 8rem;
+    }
+  }
+  
+  &__logo {
+    width: 7rem;
+    
+    @include a.breakpoint(large) {
+      width: 10rem;
+    }
   }
 
   &__socials {
     display: flex;
     gap: 1rem;
+    
+    @include a.breakpoint(medium) {
+      justify-self: flex-end;
+    }
 
     & > * {
+      height: max-content;
       color: var(--clr-white);
 
       &:hover {
         color: var(--clr-main-color-brown);
       }
     }
+
+    &--black {
+      & > * {
+        color: var(--clr-black);
+
+        &:hover {
+          color: var(--clr-white);
+        }
+      }
+    }
+  }
+  
+  &--brown {
+    color: var(--clr-black);
+    background-color: var(--clr-main-color-brown);
   }
 }

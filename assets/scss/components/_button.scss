@@ -1,9 +1,29 @@
 .button {
-  display: inline-flex;
-  gap: 1rem;
-  align-items: center;
+  display: flex;
   justify-items: center;
-  padding: 1.5rem 2rem;
   color: var(--clr-white);
   background-color: var(--clr-black);
+  transition: background-color 0.3s ease-in;
+  
+  &__text {
+    padding: 1.5rem 2rem;
+    height: 100%;
+    background-color: var(--clr-black);
+    transition: background-color 0.075s ease-in;
+  }
+
+  &:hover &__text {
+    background-color: var(--clr-main-color-brown);
+  }
+
+  &__arrow {
+    height: 100%;
+    padding: 1.5rem;
+    background-color: var(--clr-main-color-brown);
+    transition: background-color 0.075s ease-in;
+  }
+  
+  &:hover &__arrow {
+    background-color: var(--clr-black);
+  }
 }
